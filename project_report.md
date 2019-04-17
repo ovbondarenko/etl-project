@@ -24,4 +24,4 @@ First, we downloaded the original public health dataset for 500 US citiesfrom Ka
 
 ## Loading
 
-With SQLalchemy queries we configure an engine and create a connection to MySQL. Next, we create a new empty database called 'city_health_demographics', where we load the transformed Census and city health data as two separate tables ('city_demographics' and 'city_health'). Lastly, we merge the two tables into a single table 'city_health_demographics' on the city FIPS (Federal Information processing Standard Publication) code. The final database is exported and uploaded to the project files in Github, [here](data/cityhealth_db.sql).
+With SQLalchemy queries we configure an engine and create a connection to MySQL. Next, we create a new empty database called 'city_health_demographics', where we load the transformed Census and city health data as two separate tables ('city_demographics' and 'city_health'). Lastly, we merge the two tables into a single table 'city_health_demographics' on the city FIPS (Federal Information processing Standard Publication) code. The final database is exported and uploaded to the project files in Github, [here](data/).
