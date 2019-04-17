@@ -1,8 +1,10 @@
 # ETL Project Report
 
+**Project team:** Brian E Reyes, David Chen, Steve Bogdan, Olesya Bondarenko
+
 ## Summary
 
-In this project we extract socio-economical statistical data from [Census API](https://api.census.gov/data.html) and public health data for 500 US cities (available on [Kaggle](https://www.kaggle.com/cdc/500-cities)). We transform the data to a more readable format using Pandas package and loaded it to MySQL database via SQLalchemy queries. The cityhealth_db.sql database file is available for download in the [data](data) folder.
+In this project we extract socio-economical statistical data from [Census API](https://api.census.gov/data.html) and public health data for 500 US cities (available on [Kaggle](https://www.kaggle.com/cdc/500-cities)). We transform the data to a more readable format using Pandas package and load it to a MySQL database via SQLalchemy queries. The cityhealth_db.sql database file is available for download in the [data](data) folder.
 
 ## Extraction+Transformation
 
