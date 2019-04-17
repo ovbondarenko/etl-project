@@ -1,15 +1,24 @@
-## Project proposal
+# ETL Project Description
 
-The goal of the project is to extract the health statistics for 500 cities in the US and  Census data for these cities. We will further load the health and census data for these cities to a database and clean them up.
+In this project we collect socio-economical statistical data, provided by [Census via API calls](https://api.census.gov/data.html) and public health data, collected by Centers for Disease Control and Prevention, National Center for Chronic Disease Prevention and Health Promotion, Division of Population Health for 500 US cities and available on [Kaggle](https://www.kaggle.com/cdc/500-cities). We transformed the data in Pandas and loaded it to MySQL database tables using the SQLalchemy package. Finally, the two datasets were merged into a single table ('city_health_demographics' table) through the sql inner join query. The cityhealth_db.sql database file is available for download in the [data](data) folder.
 
-### Data Sources
+We built the ETL process in the [Jupyter Notebook](main.ipynb).
 
-- Kaggle Dataset: CDC 500 Cities Dozens of Public Health Datapoints Reported by Residents of 500 US Cities (https://www.kaggle.com/cdc/500-cities)
+The original project proposal can be found [here](project_proposal.md).
 
- - Statistical data for the cities from Census API (https://api.census.gov)
+The final project report can be found [here](project_report.md).
 
+## Required Python packages and other dependencies:
 
-### Database and output
+- Pandas
+- SQLalchemy
+- Requests
+- config.py file with your census api key (census_api_key) and your MySQL password (mysql_pw)
 
-We will be using MySQL to create a database titled “Health_Community_DB”. The Census data will be extracted through an API call. The data will be joined by FIPS codes on location.
+## Authors:
+
+- Brian Edward Reyes
+- David Chen
+- Steve Bogdan
+- Olesya Bondarenko
 
