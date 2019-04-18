@@ -17,16 +17,39 @@ First, we downloaded the original public health dataset for 500 US citiesfrom Ka
 
 Here is the dictionary of the column names between the original CDC 500 dataset and our final CDC dataset:
 
-columns={"StateAbbr": "State", "PlaceName": "City", "PlaceFIPS": "PlaceFIPS",
-        "ACCESS2_AdjPrev": "ACCESS2", "ARTHRITIS_AdjPrev" :"ARTHRITIS", "BINGE_AdjPrev" :"BINGE",
-        "BPHIGH_AdjPrev" :"BPHIGH", "BPMED_AdjPrev" :"BPMED", "CANCER_AdjPrev" :"CANCER", "CASTHMA_AdjPrev" :"CASTHMA",
-        "CHD_AdjPrev" :"CHD", "CHECKUP_AdjPrev" :"CHECKUP", "CHOLSCREEN_AdjPrev" :"CHOLSCREEN",
-        "COLON_SCREEN_AdjPrev" :"COLON_SCREEN", "COPD_AdjPrev" :"COPD", "COREM_AdjPrev" :"COREM",
-        "COREW_AdjPrev" :"COREW", "CSMOKING_AdjPrev" :"CSMOKING", "DENTAL_AdjPrev" :"DENTAL",
-        "DIABETES_AdjPrev" :"DIABETES", "HIGHCHOL_AdjPrev" :"HIGHCHOL", "KIDNEY_AdjPrev" :"KIDNEY",
-        "LPA_AdjPrev" :"LPA", "MAMMOUSE_AdjPrev" :"MAMMOUSE", "MHLTH_AdjPrev" :"MHLTH",
-        "OBESITY_AdjPrev" :"OBESITY", "PAPTEST_AdjPrev" :"PAPTEST", "PHLTH_AdjPrev" :"PHLTH",
-        "SLEEP_AdjPrev" :"SLEEP", "STROKE_AdjPrev" :"STROKE", "TEETHLOST_AdjPrev" :"TEETHLOST"
+columns=
+
+{"StateAbbr": "State",
+"PlaceName": "City",
+"PlaceFIPS": "PlaceFIPS",
+"ACCESS2_AdjPrev": "ACCESS2",
+"ARTHRITIS_AdjPrev" :"ARTHRITIS",
+"BINGE_AdjPrev" :"BINGE",
+"BPHIGH_AdjPrev" :"BPHIGH",
+"BPMED_AdjPrev" :"BPMED",
+"CANCER_AdjPrev" :"CANCER",
+"CASTHMA_AdjPrev" :"CASTHMA",
+"CHD_AdjPrev" :"CHD",
+"CHECKUP_AdjPrev" :"CHECKUP",
+"CHOLSCREEN_AdjPrev" :"CHOLSCREEN",
+"COLON_SCREEN_AdjPrev" :"COLON_SCREEN",
+"COPD_AdjPrev" :"COPD",
+"COREM_AdjPrev" :"COREM",
+"COREW_AdjPrev" :"COREW",
+"CSMOKING_AdjPrev" :"CSMOKING",
+"DENTAL_AdjPrev" :"DENTAL",
+"DIABETES_AdjPrev" :"DIABETES",
+"HIGHCHOL_AdjPrev" :"HIGHCHOL",
+"KIDNEY_AdjPrev" :"KIDNEY",
+"LPA_AdjPrev" :"LPA",
+"MAMMOUSE_AdjPrev" :"MAMMOUSE",
+"MHLTH_AdjPrev" :"MHLTH",
+"OBESITY_AdjPrev" :"OBESITY",
+"PAPTEST_AdjPrev" :"PAPTEST",
+"PHLTH_AdjPrev" :"PHLTH",
+"SLEEP_AdjPrev" :"SLEEP",
+"STROKE_AdjPrev" :"STROKE",
+"TEETHLOST_AdjPrev" :"TEETHLOST"    
 
 ### Census public API data
 **Source:**
@@ -40,16 +63,37 @@ columns={"StateAbbr": "State", "PlaceName": "City", "PlaceFIPS": "PlaceFIPS",
 4. Create a dictionary to convert column names from Census data codes to meaningful names to make data easier to identify.
     Here is the dictionary for all column names in the raw census data file ([data/census_data_by_city_raw.csv](data/census_data_by_city_raw.csv))
     
-    column_names = {"B01003_001E":"total_pop", "B01001_020E":"male_65_66", "B01001_021E":"male_67_69",
-                    "B01001_022E":"male_70_74", "B01001_023E":"male_75_79", "B01001_024E":"male_80_84",
-                    "B01001_025E":"male_over_85", "B01001_044E":"female_65_66", "B01001_045E":"female_67_69",
-                    "B01001_046E":"female_70_74", "B01001_047E":"female_75_79", "B01001_048E":"female_80_84",
-                    "B01001_049E":"female_over_85", "B02001_002E":"white_pop", "B02001_003E":"black_pop",
-                    "B02001_004E":"native_amer_pop", "B02001_005E":"asian_pop", "B02001_006E":"pac_island_pop",
-                    "B02001_007E":"other_race_pop", "B01001I_001E":"hispanic_pop", "B15003_002E":"no_high_school",
-                    "B15003_017E":"high_school_grad", "B15003_022E":"bachelor_deg", "B15003_023E":"master_deg", 
-                    "B15003_025E":"doctorate_deg", "B17001_002E":"below_poverty", "B27001_002E":"male_w_health_ins",
-                    "B27001_030E":"female_w_health_ins", "place":"city_FIPS"}
+column_names = 
+
+{"B01003_001E":"total_pop",
+"B01001_020E":"male_65_66",
+"B01001_021E":"male_67_69",
+"B01001_022E":"male_70_74",
+"B01001_023E":"male_75_79",
+"B01001_024E":"male_80_84",
+"B01001_025E":"male_over_85",
+"B01001_044E":"female_65_66",
+"B01001_045E":"female_67_69",
+"B01001_046E":"female_70_74",
+"B01001_047E":"female_75_79",
+"B01001_048E":"female_80_84",
+"B01001_049E":"female_over_85",
+"B02001_002E":"white_pop",
+"B02001_003E":"black_pop",
+"B02001_004E":"native_amer_pop",
+"B02001_005E":"asian_pop",
+"B02001_006E":"pac_island_pop",
+"B02001_007E":"other_race_pop",
+"B01001I_001E":"hispanic_pop",
+"B15003_002E":"no_high_school",
+"B15003_017E":"high_school_grad",
+"B15003_022E":"bachelor_deg",
+"B15003_023E":"master_deg",
+"B15003_025E":"doctorate_deg",
+"B17001_002E":"below_poverty",
+"B27001_002E":"male_w_health_ins",
+"B27001_030E":"female_w_health_ins",
+"place":"city_FIPS"}
 
 5. Convert all columns with population data to numeric values.
 6. Add columns for number of males and females and store as a new column for a single number of people with health insurance
