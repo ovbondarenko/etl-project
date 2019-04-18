@@ -4,7 +4,7 @@
 
 ## Summary
 
-In this project we extract socio-economical statistical data from [Census API](https://api.census.gov/data.html) and public health data for 500 US cities (available on [Kaggle](https://www.kaggle.com/cdc/500-cities)). We transform the data to a more readable format using Pandas package and load it to a MySQL database via SQLalchemy queries. The cityhealth_db.sql database file is available for download in the [data](data) folder.
+In this project we extract socio-economic data from [Census API](https://api.census.gov/data.html) by city and public health data for 500 US cities (available on [Kaggle](https://www.kaggle.com/cdc/500-cities)). We transform the data to a more readable format using Pandas package and load it to a MySQL database via SQLalchemy queries. The cityhealth_db.sql database file can be found in the [data](data) folder.
 
 ## Extraction+Transformation
 
@@ -12,14 +12,14 @@ In this project we extract socio-economical statistical data from [Census API](h
 **Source:**
 CDC 500 Cities Kaggle Dataset (https://www.kaggle.com/cdc/500-cities). his data was collected by Centers for Disease Control and Prevention, National Center for Chronic Disease Prevention and Health Promotion, Division of Population Health
 
-**Process**
+**Process:**
 First, we downloaded the original public health dataset for 500 US citiesfrom Kaggle and saved as a .csv file. In Jupyter Notebook, we transform the raw dataset with 117 columns to a smaller dataset with 31 columns and update the column names for a better readability using Pandas At this point the dataset is ready to be loaded to the database.
 
 ### Census public API data
 **Source:**
 [Census API](https://api.census.gov/data.html) 
 
-**Process**
+**Process:**
 
 
 ## Loading
