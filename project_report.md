@@ -16,6 +16,7 @@ CDC 500 Cities Kaggle Dataset (https://www.kaggle.com/cdc/500-cities). his data 
 First, we downloaded the original public health dataset for 500 US citiesfrom Kaggle and saved as a .csv file. In Jupyter Notebook, we transform the raw dataset with 117 columns to a smaller dataset with 31 columns and update the column names for a better readability using Pandas At this point the dataset is ready to be loaded to the database.
 
 Here is the dictionary of the column names between the original CDC 500 dataset and our final CDC dataset:
+
 columns={"StateAbbr": "State", "PlaceName": "City", "PlaceFIPS": "PlaceFIPS",
         "ACCESS2_AdjPrev": "ACCESS2", "ARTHRITIS_AdjPrev" :"ARTHRITIS", "BINGE_AdjPrev" :"BINGE",
         "BPHIGH_AdjPrev" :"BPHIGH", "BPMED_AdjPrev" :"BPMED", "CANCER_AdjPrev" :"CANCER", "CASTHMA_AdjPrev" :"CASTHMA",
@@ -38,6 +39,7 @@ columns={"StateAbbr": "State", "PlaceName": "City", "PlaceFIPS": "PlaceFIPS",
 3. Set the data frame column names by converting the first row of the data frame to column names.
 4. Create a dictionary to convert column names from Census data codes to meaningful names to make data easier to identify.
     Here is the dictionary for all column names in the raw census data file ([data/census_data_by_city_raw.csv](data/census_data_by_city_raw.csv))
+    
     column_names = {"B01003_001E":"total_pop", "B01001_020E":"male_65_66", "B01001_021E":"male_67_69",
                     "B01001_022E":"male_70_74", "B01001_023E":"male_75_79", "B01001_024E":"male_80_84",
                     "B01001_025E":"male_over_85", "B01001_044E":"female_65_66", "B01001_045E":"female_67_69",
