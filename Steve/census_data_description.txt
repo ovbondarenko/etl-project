@@ -1,0 +1,13 @@
+Steps for creating the Census demographic data set.
+
+1. Select which US Census survey and data set contains usable demographic data (age, race, education, poverty level, has health ins) and select api to get the data at the city level.
+2. Make api call to the Census data site and convert the returned json object to a Pandas dataframe.
+3. Set the data frame column names by converting the first row of the data frame to column names.
+4. Create a dictionary to convert column names from Census data codes to meaningful names to make data easier to identify.
+5. Convert all columns with population data to numeric values.
+6. Add columns for number of males and females and store as a new column for a single number of people with health insurance
+7. Contantenate the state FIPS code column with the city FIPS code column to match the format of the health data location field
+8. There was not a single data field for the population over 65, all population fields with age ranges over 65 for males and females were     called from the Census site. All age range columns for males and females were added together to get a single population number of people over 65.
+9. Very similarly, there was not a single field of number of people with education beyond high school. Multiple fields were called from the census site for numbers of people with different college degrees. These were added together in single column.
+10. Created a new dataframe with discarding columns not needed after they were consolidated into other columns.
+11. Divided all columns with demographic data my the total population column to covert them to percentages.
